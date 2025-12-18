@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador | Neo-Brutalism</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="80">
+    <header>
+      <nav
+        id="navbar-main"
+        class="navbar navbar-expand-lg navbar-dark navbar-brutal fixed-top py-3"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand fw-bold text-uppercase"
+            href="#"
+            style="
+              font-family: 'Space Grotesk', sans-serif;
+              letter-spacing: -1px;
+            "
+          >
+            <i class="fas fa-cube text-neon-blue me-2"></i>Carteira.Z
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicio" id="inicio">_INÍCIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gestor" id="gestor-link">_GESTOR</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="inicio" class="d-flex align-items-center min-vh-100 pt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1
+              class="display-1 fw-bold text-white mb-4"
+              style="line-height: 0.9"
+            >
+              CONTROLE <br />
+              <span class="text-neon-blue">FINANCEIRO</span> <br />
+              ABSOLUTO.
+            </h1>
+            <p
+              class="lead text-muted mono-font mb-5 border-start border-4 border-white ps-3"
+            >
+              // SISTEMA DE GESTÃO V.2.0<br />
+              Sem curvas. Sem distrações. Apenas números.
+            </p>
+            <a href="#gestor" class="btn btn-brutal">
+              ACESSAR SISTEMA <i class="fas fa-arrow-down ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gestor" class="py-5 mb-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 border-bottom border-2 border-secondary pb-2">
+            <h2 class="text-uppercase mb-0">
+              <i class="fas fa-terminal me-2 text-neon-purple"></i>Dashboard
+            </h2>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="card card-receita h-100 p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h5 class="text-muted text-uppercase mb-0">Entradas</h5>
+                <i class="fas fa-arrow-up text-neon-green fa-2x"></i>
+              </div>
+              <p
+                class="display-6 fw-bold mono-font text-neon-green mb-0"
+                id="dinheiro-entrou"
+              >
+                € 0.00
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-despesa h-100 p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h5 class="text-muted text-uppercase mb-0">Saídas</h5>
+                <i class="fas fa-arrow-down text-neon-red fa-2x"></i>
+              </div>
+              <p
+                class="display-6 fw-bold mono-font text-neon-red mb-0"
+                id="dinheiro-saiu"
+              >
+                € 0.00
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4" style="border-color: var(--neon-blue)">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h5 class="text-white text-uppercase mb-0">Saldo Líquido</h5>
+                <i class="fas fa-wallet text-neon-blue fa-2x"></i>
+              </div>
+              <span
+                class="display-5 fw-bold mono-font text-white"
+                id="valor-total"
+              >
+                € 0.00
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <div class="card p-4">
+              <h4
+                class="mb-4 text-uppercase border-bottom border-secondary pb-2"
+              >
+                Nova Operação
+              </h4>
+
+              <div class="mb-3">
+                <label
+                  for="descricao"
+                  class="form-label mono-font text-muted text-uppercase small"
+                  >Descrição</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="descricao"
+                  placeholder="EX: SERVIDOR AWS"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label
+                  for="valor"
+                  class="form-label mono-font text-muted text-uppercase small"
+                  >Valor (€)</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="valor"
+                  placeholder="0.00"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="tipo-transacao"
+                  class="form-label mono-font text-muted text-uppercase small"
+                  >Tipo</label
+                >
+                <select class="form-select" id="tipo-transacao">
+                  <option value="entrada">ENTRADA (+)</option>
+                  <option value="saida">SAÍDA (-)</option>
+                </select>
+              </div>
+
+              <button id="btn-adicionar" class="btn btn-brutal w-100">
+                <i class="fas fa-plus me-2"></i>REGISTRAR
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <h4 class="mb-4 text-uppercase">Log de Transações</h4>
+
+            <div
+              class="p-2"
+              style="background: #050505; border: 2px solid #222"
+            >
+              <ul id="lista-transacoes" class="list-unstyled mb-0"></ul>
+              <div class="text-center mt-3 text-muted mono-font small">
+                // FIM DO REGISTRO
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 border-top border-2 border-secondary bg-black mt-auto">
+      <div class="container text-center">
+        <p class="mono-font text-muted mb-0 small">
+          SYSTEM_STATUS: ONLINE <span class="text-neon-green mx-2">●</span> ©
+          2024
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+/* --- IMPORTAÇÃO DE FONTES (Estilo Técnico/Futurista) --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #000000;
+    --card-bg: #0a0a0a;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+
+    /* Cores Neon Brutalista (Saturadas) */
+    --neon-blue: #00f0ff;
+    --neon-green: #0aff00;
+    --neon-red: #ff003c;
+    --neon-purple: #bd00ff;
+
+    /* Configuração de Bordas */
+    --border-width: 2px;
+    --shadow-offset: 6px;
+}
+
+/* --- RESET GERAL E ESTRUTURA --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Estilizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-main);
+    border: 2px solid var(--bg-color);
+}
+
+/* --- TIPOGRAFIA --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+#inicio {
+    /* O gradiente preto (0.8 e 0.9) cria a sobreposição escura */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)),
+        url('assets/photo-background.avif');
+
+    background-size: cover;
+    /* Cobre toda a área */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete */
+    background-attachment: fixed;
+    /* Efeito Parallax (a imagem fica parada enquanto você rola) */
+
+    /* Mantém a borda inferior brutalista */
+    border-bottom: 2px solid var(--text-main);
+}
+
+.mono-font {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- COMPONENTES BRUTALISTAS (Cards) --- */
+/* Substitui o estilo padrão do Bootstrap */
+.card {
+    background-color: var(--card-bg);
+    border: var(--border-width) solid var(--text-main);
+    border-radius: 0 !important;
+    /* Zero curvas no brutalismo */
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px rgba(255, 255, 255, 0.15);
+}
+
+/* Efeito Hover Agressivo */
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--shadow-offset) + 4px) calc(var(--shadow-offset) + 4px) 0px var(--neon-blue);
+    border-color: var(--neon-blue);
+    z-index: 10;
+}
+
+/* Variações de cor para os cards de saldo */
+.card-receita:hover {
+    box-shadow: calc(var(--shadow-offset) + 4px) calc(var(--shadow-offset) + 4px) 0px var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+.card-despesa:hover {
+    box-shadow: calc(var(--shadow-offset) + 4px) calc(var(--shadow-offset) + 4px) 0px var(--neon-red);
+    border-color: var(--neon-red);
+}
+
+/* --- FORMULÁRIOS BRUTALISTAS --- */
+.form-control,
+.form-select {
+    background-color: #000;
+    border: 2px solid #333;
+    color: #fff;
+    border-radius: 0;
+    padding: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    box-shadow: 4px 4px 0px #222;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #000;
+    color: #fff;
+    border-color: var(--neon-purple);
+    box-shadow: 6px 6px 0px var(--neon-purple);
+    outline: none;
+}
+
+/* Placeholder cor */
+::placeholder {
+    color: #555 !important;
+    opacity: 1;
+}
+
+/* --- BOTÕES BRUTALISTAS --- */
+.btn-brutal {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    border: 2px solid var(--text-main);
+    border-radius: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    box-shadow: 4px 4px 0px var(--neon-blue);
+    transition: all 0.1s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.btn-brutal:hover {
+    background-color: var(--neon-blue);
+    color: #000;
+    box-shadow: 6px 6px 0px #fff;
+    transform: translate(-2px, -2px);
+}
+
+.btn-brutal:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px;
+}
+
+/* --- LISTA DE TRANSAÇÕES (Customizada para o seu JS) --- */
+#lista-transacoes {
+    padding: 0;
+}
+
+#lista-transacoes li {
+    background: #000;
+    border: 1px solid #333;
+    border-left: 5px solid #555;
+    /* Indicador lateral */
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    transition: 0.2s;
+}
+
+#lista-transacoes li:hover {
+    border-left-width: 10px;
+    background-color: #0a0a0a;
+}
+
+/* Classes dinâmicas do seu JS */
+#lista-transacoes li span.positivo {
+    color: var(--neon-green);
+    text-shadow: none;
+    /* Brutalismo evita blur */
+}
+
+#lista-transacoes li span.negativo {
+    color: var(--neon-red);
+    text-shadow: none;
+}
+
+/* Botão de excluir (X) */
+#lista-transacoes li button {
+    background: var(--neon-red);
+    color: #000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    box-shadow: 3px 3px 0px #fff;
+}
+
+#lista-transacoes li button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px;
+}
+
+/* --- CORES DE TEXTO E VALORES --- */
+.text-neon-green {
+    color: var(--neon-green) !important;
+}
+
+.text-neon-red {
+    color: var(--neon-red) !important;
+}
+
+.text-neon-blue {
+    color: var(--neon-blue) !important;
+}
+
+/* Navbar override */
+.navbar-brutal {
+    border-bottom: 2px solid #333;
+    background-color: #000 !important;
+}
+
+.nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: var(--neon-blue) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
