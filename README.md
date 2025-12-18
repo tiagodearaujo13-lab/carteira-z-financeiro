@@ -79,4 +79,4 @@ carteira-z-financeiro/
 git clone [https://github.com/tiagodearaujo13-lab/carteira-z-financeiro.git](https://github.com/tiagodearaujo13-lab/carteira-z-financeiro.git)
 
 
-
+LinkedIn https://www.linkedin.com/in/tiago-ara%C3%BAjo-45924b217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
