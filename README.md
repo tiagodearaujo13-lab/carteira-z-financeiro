@@ -6,7 +6,7 @@
 > "Sem curvas. Sem distrações. Apenas controle absoluto."
 
 <div align="center">
-  <img src="img/cover.png" alt="Preview do Dashboard" width="100%" style="border: 2px solid #fff; box-shadow: 8px 8px 0px #00f3ff;">
+  <img src="assets/cover.png" alt="Preview do Dashboard" width="100%" style="border: 2px solid #fff; box-shadow: 8px 8px 0px #00f3ff;">
 </div>
 
 <br>
