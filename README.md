@@ -78,13 +78,5 @@ carteira-z-financeiro/
 
 git clone [https://github.com/tiagodearaujo13-lab/carteira-z-financeiro.git](https://github.com/tiagodearaujo13-lab/carteira-z-financeiro.git)
 
-### O que fazer depois de colar:
 
-1.  **Link do LinkedIn:** Lá no final, onde diz `(SEU_LINK_DO_LINKEDIN_AQUI)`, coloque o link do seu perfil.
-2.  **A Foto:** Não esqueça de colocar o print da tela com o nome `cover.png` na pasta `img`, senão a imagem vai aparecer quebrada.
-3.  **Subir para o GitHub:**
-    - No VS Code: `git add .`
-    - `git commit -m "Docs: Atualiza README profissional"`
-    - `git push`
 
-Ficou com uma cara de projeto "Senior" agora! 😎
