@@ -67,7 +67,7 @@ Este projeto foi desenvolvido utilizando as melhores práticas de Front-end bás
 carteira-z-financeiro/
 │
 ├── assets/                # Assets e Backgrounds
-│   ├── photobackground.avif   # Fundo da seção Hero
+│   ├── photo-background.avif   # Fundo da seção Hero
 │   └── cover.png       # Print para o README
 │
 ├── index.html          # Estrutura principal
