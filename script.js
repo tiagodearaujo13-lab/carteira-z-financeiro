@@ -13,7 +13,7 @@ const elementoDespesas = document.querySelector("#dinheiro-saiu");
 const elementoTotal = document.querySelector("#valor-total");
 
 // Formatador para deixar o valor bonitinho em Euros
-const formatador = new Intl.NumberFormat('pt-Pt', {
+const formatador = new Intl.NumberFormat('pt-PT', {
     style: 'currency',
     currency: 'EUR'
 });
